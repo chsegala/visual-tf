@@ -10,7 +10,7 @@ problem I had.
 ## Usage
 
 1. clone this repo
-2. yarn install && npm link .
+2. yarn install && yarn build && npm link .
 3. cd /my/terraform/folder
 4. terraform init
 5. visual-tf serve
