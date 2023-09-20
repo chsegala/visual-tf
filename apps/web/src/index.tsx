@@ -1,13 +1,20 @@
-import React from "react";
+import { ThemeProvider } from "@emotion/react";
 import { render } from "react-dom";
-import "./index.css";
 import App from "./App";
+import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
+import { CssBaseline } from "@mui/material";
+import theme from './theme';
+
 render(
-  <React.StrictMode>
+  // <React.StrictMode>
+  //   <App />
+  // </React.StrictMode>,
+  <ThemeProvider theme={theme}>
+    <CssBaseline />
     <App />
-  </React.StrictMode>,
+  </ThemeProvider>,
   document.getElementById("root")
 );
 

@@ -1,34 +1,23 @@
-# Turborepo Create React App starter
+# Visual TF
 
-This is an official starter Turborepo.
+This is a quick and dirty application to list all resources that are being destroyed and created
+listing them side by side to make it easy to move resources. This is mainly used to migrate
+resources where there are almost 1:1 deletes to creates.
 
-## Using this example
+This is not intended to be anything production ready, it was done as a helper to a specific
+problem I had.
 
-Run the following command:
+## Usage
 
-```sh
-npx create-turbo@latest -e with-create-react-app
-```
+1. clone this repo
+2. yarn install && npm link .
+3. cd /my/terraform/folder
+4. terraform init
+5. visual-tf serve
 
-## What's inside?
+If you want a specific port, please set a `PORT=3001` environment variable.
 
-This Turborepo includes the following packages/apps:
+## Disclaimer
 
-### Apps and Packages
-
-- `docs`: a [create-react-app](https://create-react-app.dev) app
-- `web`: another [create-react-app](https://create-react-app.dev) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-plugin-react` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Jest](https://jestjs.io) test runner for all things JavaScript
-- [Prettier](https://prettier.io) for code formatting
+This was put together in a hurry to help on a specific problem, it is in no
+shape to be "releasable", but can help. 

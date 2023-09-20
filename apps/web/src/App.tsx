@@ -1,27 +1,16 @@
-import React from "react";
-import { Link } from "ui";
+import { Container } from "@mui/material";
 import "./App.css";
+import { TerraformPlan } from "./pages/terraform/plan";
+import { BusyComponent } from "./components/busy";
 
 function App(): JSX.Element {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1 className="header">
-          Web
-          <div className="Turborepo">Turborepo Example</div>
-        </h1>
-        <div>
-          <Link className="App-link" href="https://turbo.build/repo">
-            Turborepo Docs
-          </Link>
-          <span> | </span>
-          <Link className="App-link" href="https://reactjs.org">
-            React Docs
-          </Link>
-        </div>
-      </header>
-    </div>
-  );
+    <BusyComponent>
+      <Container maxWidth="lg">
+        <TerraformPlan />
+      </Container>
+    </BusyComponent>
+  )
 }
 
 export default App;
